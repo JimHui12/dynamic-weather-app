@@ -3,14 +3,17 @@ import WeatherCondition from './WeatherCondition';
 import WeatherForecast from './WeatherForecast';
 
 export default function Main (props) {
-    
-        return (
-            <main>
-                <WeatherCondition cityWeather = {props.cityWeather}/>
-                <WeatherForecast cityWeather = {props.cityWeather}/>
-            </main>
-                
+    return (
+        <main>
+            <WeatherCondition  />
+            <WeatherForecast 
+                forecasts = {props.forecasts} 
+                changeLimit={props.changeLimit}
+                limit={props.limit}
+            />
+        </main>
             
-        );    
+        
+    );    
    
 }

@@ -1,40 +1,44 @@
 import React from 'react';
-//import cityWeather from './feakWeatherData.js';
+// import axios from 'axios';
+// import { format} from 'date-fns';
+
+import ForecastRow from './ForecastRow.js';
 
 export default class WeatherForecast extends React.Component {
     render() {
-        return(
+        return (
             <section className="weather-forecast">
                 <div className="forecast__switch">
-                    <button className="forecast__switch_0 switch-active">5 items</button>
-                    <button className="forecast__switch_1">10 items</button>
+                    <button 
+                        className={`forecast__switch_0 ${this.props.limit === 5 ? 'switch-active' : ''}`}
+                        onClick={() => this.props.changeLimit(5)}
+                    >
+                        5 items
+                    </button>
+                    <button 
+                        className={`forecast__switch_1 ${this.props.limit === 10 ? 'switch-active' : ''}`}
+                        onClick={() => this.props.changeLimit(10)}
+                    >
+                        10 items
+                    </button>
                 </div>
+                {this.props.forecasts.map(forecast => 
+                    <ForecastRow 
+                        key={forecast.day + forecast.time}
+                        day={forecast.day}
+                        high={forecast.high}
+                        low={forecast.low}
+                        time={forecast.time}
+                    />, 
+                    
+                )}
 
-                <div className="weather-forecast__row">
-                    <span className="weather-forecast__day">{this.props.cityWeather[0].day}</span>
-                    <span className="weather-forecast__icon">
-                        <i className="fa fa-clock-o"></i> {this.props.cityWeather[0].time[0].clock}
-                    </span>
-                    <span className="weather-forecast__high">{this.props.cityWeather[0].time[0].highest} c</span>
-                    <span className="weather-forecast__low">{this.props.cityWeather[0].time[0].lowest} c</span>
-                </div>
-                <div className="weather-forecast__row">
-                    <span className="weather-forecast__day">{this.props.cityWeather[0].day}</span>
-                    <span className="weather-forecast__icon">
-                        <i className="fa fa-clock-o"></i> {this.props.cityWeather[0].time[1].clock}
-                    </span> 
-                    <span className="weather-forecast__high">{this.props.cityWeather[0].time[1].highest} c</span>
-                    <span className="weather-forecast__low">{this.props.cityWeather[0].time[1].lowest} c</span>                                       
-                </div>
-                <div className="weather-forecast__row">
-                    <span className="weather-forecast__day">{this.props.cityWeather[0].day}</span>
-                    <span className="weather-forecast__icon">
-                        <i className="fa fa-clock-o"></i> {this.props.cityWeather[0].time[2].clock}
-                    </span> 
-                    <span className="weather-forecast__high">{this.props.cityWeather[0].time[2].highest} c</span>
-                    <span className="weather-forecast__low">{this.props.cityWeather[0].time[2].lowest} c</span>                                         
-                </div>
+                
             </section>
+
+            
         );
     }
+
+
 }
