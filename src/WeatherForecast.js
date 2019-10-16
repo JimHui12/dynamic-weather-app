@@ -1,22 +1,22 @@
 import React from 'react';
-// import axios from 'axios';
-// import { format} from 'date-fns';
-
 import ForecastRow from './ForecastRow.js';
 
 export default class WeatherForecast extends React.Component {
+    
+
     render() {
+        const {limit, unit} = this.props;
         return (
             <section className="weather-forecast">
                 <div className="forecast__switch">
                     <button 
-                        className={`forecast__switch_0 ${this.props.limit === 5 ? 'switch-active' : ''}`}
+                        className={`forecast__switch_0 ${limit === 5 ? 'switch-active' : ''}`}
                         onClick={() => this.props.changeLimit(5)}
                     >
                         5 items
                     </button>
                     <button 
-                        className={`forecast__switch_1 ${this.props.limit === 10 ? 'switch-active' : ''}`}
+                        className={`forecast__switch_1 ${limit === 10 ? 'switch-active' : ''}`}
                         onClick={() => this.props.changeLimit(10)}
                     >
                         10 items
@@ -24,10 +24,11 @@ export default class WeatherForecast extends React.Component {
                 </div>
                 {this.props.forecasts.map(forecast => 
                     <ForecastRow 
+                        unit={unit}
                         key={forecast.day + forecast.time}
                         day={forecast.day}
-                        high={forecast.high}
-                        low={forecast.low}
+                        high={unit === 'c' ? forecast.highCelsius: forecast.highFahrenheit}
+                        low={unit === 'c' ? forecast.lowCelsius : forecast.lowFahrenheit}
                         time={forecast.time}
                     />, 
                     
