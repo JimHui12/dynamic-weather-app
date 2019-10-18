@@ -14,12 +14,9 @@ export default function Main (props) {
             <WeatherForecast 
                 unit={props.unit}
                 forecasts = {props.forecasts} 
-                changeLimit={props.changeLimit}
-                limit={props.limit}
+                changeLimit={props.changeLimit}    
             />
         </main>
-            
-        
-    );    
-   
+                
+    );       
 }
