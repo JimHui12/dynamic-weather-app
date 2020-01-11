@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import ForecastRow from './ForecastRow.js';
-import { changeLimitAction } from '../redux/weatherActions';
+import { changeLimitAction } from '../../redux/weatherActions';
 
 class WeatherForecast extends React.Component {
     render() {

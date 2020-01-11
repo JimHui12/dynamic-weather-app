@@ -1,6 +1,6 @@
 import React from 'react';
-import WeatherCondition from './WeatherCondition';
-import WeatherForecast from './WeatherForecast';
+import WeatherCondition from '../WeatherCondition/WeatherCondition';
+import WeatherForecast from '../WeatherForecast/WeatherForecast';
 
 export default function Main (props) {
     return (
