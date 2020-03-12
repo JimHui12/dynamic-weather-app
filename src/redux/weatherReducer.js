@@ -3,7 +3,7 @@ import {
     FETCH_DATA, 
     FETCH_DATA_SUCCESS
 } from './weatherActions';
-import { triggerAsyncId } from 'async_hooks';
+
 
 const initialState = {
     limit: 5,

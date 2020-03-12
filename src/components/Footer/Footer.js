@@ -4,7 +4,7 @@ export default class Footer extends React.Component {
     render() {
         return (
             <footer className="weather-channel__footer">
-                <p>Powered by React</p>
+                <p>Built with love by Jim Hui</p>
             </footer>
         )
     }

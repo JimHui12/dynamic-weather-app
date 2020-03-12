@@ -1,0 +1,76 @@
+@import '../../styles/variable';
+@import '../../styles/mixin';
+
+.search {
+    width: 100%;
+    margin: 0;
+    padding: 10px 0px;
+    display: block;
+    position: relative;
+    .search-bar {
+        text-align: right;
+        @include media-min ($screen-sm-min) {
+            width: 90%;
+            display: block;
+            margin: auto;
+            position: relative;
+            text-align: left;
+        }
+
+        @include media-min ($screen-md-min) {
+            width: 80%;
+            display: block;
+            margin: auto;
+            position: relative;
+        }
+
+        @include media-min ($screen-lg-min) {
+            width: 80%;
+            display: block;
+            margin: auto;
+            position: relative;
+        }
+
+        .search-input {
+            position: relative;
+            padding: 6px 6px;
+            border-radius: 10px 0px 0px 10px;
+            box-shadow: 0 4px 4px 0 rgba(247, 247, 247, 0.3);
+            border: 1px solid white;
+            
+        }
+
+        .search-btn {
+            position: relative;
+            background-color: #009ad8;
+            border: 1px solid #009ad8;
+            box-shadow: 0 4px 4px 0 rgba(247, 247, 247, 0.3);
+            padding: 6px 10px;
+            border-radius: 0px 10px 10px 0px;
+            color: white; 
+        }
+
+        .temp-switch {
+            margin: 0px 0px 0px 10px; 
+            background-color: #009ad8;
+            border: 1px solid #009ad8;
+            box-shadow: 0 4px 4px 0 rgba(247, 247, 247, 0.3);
+            padding: 5px 12px;
+            text-align: center;
+            position: relative;
+            top: 1px;
+            border-radius: 10px;
+            color: white; 
+            i {
+               padding-right: 5px; 
+
+               &:before {
+                   content: "\f2cb";
+                    
+               }
+            }
+        }
+
+    }
+
+}

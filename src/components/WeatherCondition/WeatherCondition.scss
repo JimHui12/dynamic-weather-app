@@ -1,0 +1,35 @@
+@import '../../styles/variable';
+@import '../../styles/mixin';
+
+.weather-condition {
+    .weather-condition__location {
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        @include media-min ($screen-sm-min) {
+           
+        }
+    
+        @include media-min ($screen-md-min) {
+            
+        }
+        
+        @include media-min ($screen-lg-min) {
+              
+        }
+       
+    }
+
+    .weather-condition__temp {
+        text-align: center;
+        font-size: 100px;
+        font-weight: 100;
+        padding: 20px 0px;
+    }
+
+    .weather-condition__desc {
+        
+    }
+
+}

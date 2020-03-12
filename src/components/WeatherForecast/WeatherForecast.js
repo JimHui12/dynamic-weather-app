@@ -1,7 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import ForecastRow from './ForecastRow.js';
+import ForecastRow from '../ForecastRow/ForecastRow';
 import { changeLimitAction } from '../../redux/weatherActions';
+import { format} from 'date-fns';
 
 class WeatherForecast extends React.Component {
     render() {
@@ -9,7 +10,7 @@ class WeatherForecast extends React.Component {
         const forecasts = this.props.forecasts.slice(0, limit);
 
         return (
-            <section className="weather-forecast">
+            <section className="weather-information weather-forecast">
                 <div className="forecast__switch">
                     <button 
                         className={`forecast__switch_0 ${limit === 5 ? 'switch-active' : ''}`}

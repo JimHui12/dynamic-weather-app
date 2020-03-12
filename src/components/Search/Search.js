@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default function Nav (props){
+export default function Search (props){
     return (
-        <nav>
-            <div>
+        <div className="search">
+            <div className="search-bar">
                 <input 
                     className="search-input" 
                     value={props.inputValue} 
@@ -23,7 +23,7 @@ export default function Nav (props){
                     </i><sup>&deg;</sup>{props.unit.toUpperCase()}
                 </button>
             </div>                
-        </nav>
+        </div>
     );
     
 }

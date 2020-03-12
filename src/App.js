@@ -1,13 +1,11 @@
 import React from 'react';
 import {connect } from 'react-redux';
-import './App.css';
+import './styles/_app.scss';
 import {getWeatherFor} from './utils/axios.js';
-import { format} from 'date-fns';
-
-import Header from './components/Header';
-import Nav from './components/Nav';
-import Main from './components/Main';
-import Footer from './components/Footer';
+import Header from './components/Header/Header';
+import Search from './components/Search/Search';
+import Main from './components/Main/Main';
+import Footer from './components/Footer/Footer';
 
 import {fetchDataThunkAction} from './redux/weatherActions';
 
@@ -25,7 +23,6 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    //fetch data
     getWeatherFor('brisbane')
       .then(this.updateWeather);
   }
@@ -39,20 +36,8 @@ class App extends React.Component {
   }
 
   updateWeather = data => {
-    // const forecasts = response.data.data.forecast.slice(0, 10).map(forecast => {
-    //   const date = new Date(forecast.time * 1000);
-    //   const day = format(date, 'EEE');
-    //   const time = format(date, 'HH:mm');                    
-    //   return {
-    //       day,
-    //       time,
-    //       highCelsius: forecast.maxCelsius,
-    //       highFahrenheit: forecast.maxFahrenheit,
-    //       lowCelsius: forecast.minCelsius,
-    //       lowFahrenheit: forecast.minFahrenheit,
-    //   };
-    // });
-    const city = data.city.name;
+    console.log(data);
+    const city = data.city;
     const condition = data.current;   
     const forecasts = data.forecast.slice(0, 10); 
     this.setState({city, condition, forecasts });  
@@ -71,7 +56,7 @@ class App extends React.Component {
     return (
       <div className="weather-channel__container">
         <Header />
-        <Nav 
+        <Search 
           handleInputChange={this.handleInputChange}
           inputValue={this.state.input}
           handleSearch={this.handleSearch}

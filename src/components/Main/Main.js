@@ -4,7 +4,7 @@ import WeatherForecast from '../WeatherForecast/WeatherForecast';
 
 export default function Main (props) {
     return (
-        <main>
+        <main className="container">
             <WeatherCondition  
                 unit={props.unit}
                 city = {props.city}

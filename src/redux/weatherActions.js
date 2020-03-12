@@ -3,6 +3,7 @@ import {getWeatherFor} from '../utils/axios.js';
 export const CHANGE_LIMIT = 'CHANGE_LIMIT';
 export const FETCH_DATA_SUCCESS = 'FETCH_DATA_SUCCESS';
 export const FETCH_DATA = 'FETCH_DATA';
+export const FETCH_DATA_FAILURE = 'FETCH_DATA_FAILURE';
 
 export const changeLimitAction = (limit) => ({
     limit,
@@ -18,7 +19,7 @@ export const fetchDataSuccess = (data) => ({
     type: FETCH_DATA_SUCCESS,
 });
 
-export const fetchDataFailure = () => ({
+export const fetchDataFailure = (error) => ({
     error,
     type: FETCH_DATA_FAILURE,
 })

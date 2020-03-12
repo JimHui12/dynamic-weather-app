@@ -9,8 +9,8 @@ export default function ForecastRow(props) {
 				<i className="fa fa-clock-o" />
 				{props.time}
 			</span>
-			<span className="weather-forecast__high">{props.high} °{props.unit}</span>
-			<span className="weather-forecast__low">{props.low} °{props.unit}</span>
+			<span className="weather-forecast__high">{Math.round(props.high)} °{props.unit}</span>
+			<span className="weather-forecast__low">{Math.round(props.low)} °{props.unit}</span>
 		</div>
 		
 	);

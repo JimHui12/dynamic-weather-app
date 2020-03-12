@@ -1,0 +1,26 @@
+@import '../../styles/variable';
+@import '../../styles/mixin'; 
+
+.weather-channel__footer {
+    position: relative;
+    top: 10px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px 0px;
+    text-align: center;
+    color: white;
+
+    @include media-min ($screen-md-min) {
+        width: 100%;
+        margin: 0 auto;
+        padding: 6px 0px;
+        text-align: center;
+    }
+
+    @include media-min ($screen-sm-min) {
+        width: 100%;
+        margin: 0 auto;
+        padding: 4px 0px;
+        text-align: center;
+    }
+}
