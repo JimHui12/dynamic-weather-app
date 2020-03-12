@@ -28,7 +28,9 @@ export const fetchDataThunkAction = city => (dispatch) => {
     dispatch(fetchData());
     
     getWeatherFor(city).then(data => {
-        
+        dispatch(fetchDataSuccess(data));
+    }).catch(err => {
+        dispatch(fetchDataFailure(err));
     });
     
 }
