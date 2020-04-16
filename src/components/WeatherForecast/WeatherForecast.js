@@ -25,22 +25,26 @@ class WeatherForecast extends React.Component {
                         10 items
                     </button>
                 </div>
-                {forecasts.map(forecast => {
-					const date = new Date(forecast.time * 1000);
-					const day = format(date, 'EEE');
-					const time = format(date, 'HH:mm');
+                <div className="weather-forecast__column">
+                    {forecasts.map(forecast => {
+                        const date = new Date(forecast.time * 1000);
+                        const day = format(date, 'EEE');
+                        const time = format(date, 'HH:mm');
 
-					return (
-						<ForecastRow
-							key={forecast.time}
-							day={day}
-							high={forecast.maxCelsius}
-							low={forecast.minCelsius}
-							time={time}
-							unit={unit}
-						/>
-					);
-				})}               
+                        return (
+                            <ForecastRow
+                                key={forecast.time}
+                                day={day}
+                                high={forecast.maxCelsius}
+                                low={forecast.minCelsius}
+                                weather={forecast.weather}
+                                weatherIcon={forecast.weatherIcon}
+                                time={time}
+                                unit={unit}
+                            />
+                        );
+                    })}  
+                </div>             
             </section>    
         );
     }

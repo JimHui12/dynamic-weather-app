@@ -3,9 +3,9 @@
 
 .container {
     position: relative;
-    margin: 0;
+    margin: 0px auto 10px auto;
     padding: 20px 0px;
-    display: block;
+    display: block; 
     width: auto;
     border: 1px solid rgba(138,133,138,0.93);
     -webkit-box-shadow: -1px -2px 9px 2px rgba(138,133,138,0.93);
@@ -13,11 +13,13 @@
     box-shadow: -1px -2px 9px 2px rgba(138,133,138,0.93);
     top: 10px;    
     color: rgba(228, 222, 228, 0.93);   
+    flex: 1 0 auto;
     
     .weather-information {
         @include media-min ($screen-sm-min) {
             width: 100%;
             margin: 0 auto;
+            
         }
     
         @include media-min ($screen-md-min) {
@@ -26,17 +28,29 @@
         }
         
         @include media-min ($screen-lg-min) {
-            width: 40%;
-            display: inline-block;   
+            width: 50%;
+            display: inline-grid;   
         }
-        width: 40%;
+
+        @include media-min ($screen-ex-min) {
+            width: 50%;
+            display: inline-grid;   
+        }
+        
+        width: 50%;
         display: inline-block;   
     }
 
     @include media-min ($screen-lg-min) {
-        justify-content: space-around;
+        justify-content: space-between;
         margin: 0 auto;
-        
+        text-align: center;
+    }
+
+    @include media-min ($screen-ex-min) {
+        justify-content: space-between;
+        margin: 0 auto;
+        text-align: center;
     }
 }
 

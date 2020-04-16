@@ -3,24 +3,59 @@
 
 .weather-channel__footer {
     position: relative;
-    top: 10px;
+    bottom: 0px;
     width: 100%;
-    margin: 0 auto;
-    padding: 10px 0px;
+    margin: 0px auto 10px auto;
     text-align: center;
     color: white;
+    grid-row-start: 2;
+    grid-row-end: 3;  
+    // flex: 0 0 auto;
+    
+    @include media-min ($screen-sm-min) {
+        width: 100%;
+        margin: 0px auto 10px auto;;
+        position: relative; 
+        text-align: center;
+        grid-row-start: 2;
+        grid-row-end: 3;    
+        bottom: 0px;  
+        // flex: 0 0 auto;
+        p {
+            padding: 10px 0px;
+        }
+    }
 
     @include media-min ($screen-md-min) {
         width: 100%;
-        margin: 0 auto;
-        padding: 6px 0px;
+        margin: 0px auto 10px auto;
+        position: relative;
         text-align: center;
+        grid-row-start: 2;
+        grid-row-end: 3;    
+        bottom: 0px; 
+        // flex: 0 0 auto;
+    }
+    
+    @include media-min ($screen-lg-min) {
+        width: 100%;
+        margin: 0px auto 10px auto;
+        position: absolute; 
+        text-align: center;
+        grid-row-start: 2;
+        grid-row-end: 3;    
+        bottom: 0px; 
+        // flex: 0 0 auto; 
     }
 
-    @include media-min ($screen-sm-min) {
+    @include media-min ($screen-ex-min) {
         width: 100%;
-        margin: 0 auto;
-        padding: 4px 0px;
+        margin: 0px auto 10px auto;
+        position: absolute; 
         text-align: center;
+        grid-row-start: 2;
+        grid-row-end: 3;    
+        bottom: 0px;  
+        // flex: 0 0 auto;
     }
 }

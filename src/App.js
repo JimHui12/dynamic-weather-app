@@ -5,6 +5,7 @@ import {getWeatherFor} from './utils/axios.js';
 import Header from './components/Header/Header';
 import Search from './components/Search/Search';
 import Main from './components/Main/Main';
+import Push from './components/Push/Push';
 import Footer from './components/Footer/Footer';
 
 import {fetchDataThunkAction} from './redux/weatherActions';
@@ -69,6 +70,7 @@ class App extends React.Component {
           condition={this.state.condition}
           forecasts={this.state.forecasts}
         />
+        <Push />
         <Footer />
       </div>
     );

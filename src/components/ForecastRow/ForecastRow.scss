@@ -1,0 +1,61 @@
+@import '../../styles/variable';
+@import '../../styles/mixin';
+
+.weather-forecast__row {
+    width: 90%;
+    margin: 0 auto;
+    
+
+    @include media-min ($screen-sm-min) {
+        padding: 8px 0px;
+         
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    @include media-min ($screen-md-min) {
+        padding: 8px 0px;
+         
+        text-align: center;
+        margin: 0 auto;
+    }
+    
+    @include media-min ($screen-lg-min) {
+        padding: 8px 0px;
+         
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    div {
+        @include media-min ($screen-sm-min) { 
+            display: flex;             
+        }
+    
+        @include media-min ($screen-md-min) {
+            display: flex; 
+        }
+        
+        @include media-min ($screen-lg-min) {
+            display: flex;  
+        }
+    }
+
+    span {
+        @include media-min ($screen-sm-min) { 
+            display: table-cell;   
+            width: 200px;          
+        }
+    
+        @include media-min ($screen-md-min) {
+            display: table-cell; 
+            width: 200px;
+        }
+        
+        @include media-min ($screen-lg-min) {
+            display: table-cell;
+            width: 200px;   
+        }
+    
+    }
+}

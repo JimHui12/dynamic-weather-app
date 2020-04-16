@@ -18,30 +18,35 @@ export default function WeatherCondition(props) {
             windSpeed,
             windDirection,
             weatherDesc,
-            weather,
             weatherIcon,
         },
         unit
     } = props;
     return(
         <section className="weather-information weather-condition">
-            <div className="weather-condition__location"> {name}</div>
+            <div className="weather-condition__location">{name}</div>
             
-            <div className="weather-condition__temp"> {unit === 'c' ? Math.round(maxCelsius) : Math.round(maxFahrenheit)} °{unit}</div>
+            <div className="weather-condition__temp_uni">
+                <div className="weather-condition__temp"> {unit === 'c' ? Math.round(maxCelsius) : Math.round(maxFahrenheit)} </div>
+                <div className="weather-condition__unit">°{unit}</div>
+            </div>
+
+            <div className="weather-condition__description">
+                {weatherDesc} 
+            </div>
+            <div className="weather-condition__icon">
+                <img src={"http://openweathermap.org/img/wn/" + weatherIcon + "@2x.png"} /> 
+            </div>
             <div className="weather-condition__desc">
-                <div>
-                     
-                    <span className="description"> {weatherDesc}</span>
-                </div>
-                <div>
+                <div className="weather-condition_info">
                     <img src={umberella} alt="umberealla icon"/>
                     <span className="citem"> {humidity} %</span>
                 </div>
-                <div>
+                <div className="weather-condition_info">
                     <img src={wind} alt="wind icon"/>
                     <span className="citem"> {windSpeed} km/h</span>    
                 </div>
-                <div>
+                <div className="weather-condition_info">
                     <img src={compass} alt="compass icon" />
                     <span className="citem"> {windDirection}</span>
                 </div>

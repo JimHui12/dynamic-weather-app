@@ -5,28 +5,36 @@
     width: 100%;
     margin: 0 auto;
     padding: 20px 0px;
-
+    position: relative;
+    // flex: 0 0 auto;
 
     @include media-min ($screen-sm-min) {
         padding: 10px 0px;
+        // position: relative;
     }
 
     @include media-min ($screen-md-min) {
         padding: 14px 0px;
         width: 80%;
         text-align: left;
+        // position: relative;
+        letter-spacing: 1px;
     }
 
     @include media-min ($screen-lg-min) {
         padding: 16px 0px;
         width: 80%;
         text-align: left;
+        // position: relative;
+        letter-spacing: 1px;
     }
 
     @include media-min ($screen-ex-min) {
         padding: 18px 0px;
         width: 80%;
         text-align: left;
+        // position: relative;
+        letter-spacing: 1px;
     }
 
     .header__logo {
@@ -41,7 +49,7 @@
         display: inline-block;
         padding: 0px 0px 0px 10px;
         vertical-align: middle;
-        letter-spacing: 1px;
+        
         text-align: center;
         margin: 0;
     }
