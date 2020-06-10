@@ -20,14 +20,14 @@
         }
 
         @include media-min ($screen-md-min) {
-            width: 80%;
+            width: 90%;
             display: block;
             margin: auto;
             position: relative;
         }
 
         @include media-min ($screen-lg-min) {
-            width: 80%;
+            width: 90%;
             display: block;
             margin: auto;
             position: relative;

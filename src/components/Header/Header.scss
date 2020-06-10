@@ -15,7 +15,7 @@
 
     @include media-min ($screen-md-min) {
         padding: 14px 0px;
-        width: 80%;
+        width: 90%;
         text-align: left;
         // position: relative;
         letter-spacing: 1px;
@@ -23,7 +23,7 @@
 
     @include media-min ($screen-lg-min) {
         padding: 16px 0px;
-        width: 80%;
+        width: 90%;
         text-align: left;
         // position: relative;
         letter-spacing: 1px;
@@ -31,7 +31,7 @@
 
     @include media-min ($screen-ex-min) {
         padding: 18px 0px;
-        width: 80%;
+        width: 90%;
         text-align: left;
         // position: relative;
         letter-spacing: 1px;

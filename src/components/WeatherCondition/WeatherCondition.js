@@ -27,8 +27,8 @@ export default function WeatherCondition(props) {
             <div className="weather-condition__location">{name}</div>
             
             <div className="weather-condition__temp_uni">
-                <div className="weather-condition__temp"> {unit === 'c' ? Math.round(maxCelsius) : Math.round(maxFahrenheit)} </div>
-                <div className="weather-condition__unit">°{unit}</div>
+                <span className="weather-condition__temp"> {unit === 'c' ? Math.round(maxCelsius) : Math.round(maxFahrenheit)} <span className="weather-condition__unit">°{unit}</span></span>
+                
             </div>
 
             <div className="weather-condition__description">

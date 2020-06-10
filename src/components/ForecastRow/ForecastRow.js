@@ -5,14 +5,18 @@ export default function ForecastRow(props) {
 	return (
 		<div className="weather-forecast__row">
 			<div className="weather-forecast__day">{props.day}</div>
-			<div className="weather-forecast__day">{props.time}</div>
-			<span className=" ">{props.weather} </span>
-			<span className=" ">
-			<img src={"http://openweathermap.org/img/wn/" + props.weatherIcon + ".png"} />
-				 
-			</span>
-			<span className="weather-forecast__high">{Math.round(props.high)}°</span>
-			<span className="weather-forecast__low">{Math.round(props.low)}°</span>
+			<div className="weather-forecast__time">{props.time}</div>
+			<div className="weather-forecast__d_i_h_l">
+				<div className="weather-forecast__desc">{props.weather} </div>
+				<div className="weather-forecast__img">
+					<img src={"http://openweathermap.org/img/wn/" + props.weatherIcon + ".png"} />	 
+				</div>
+				<div className="weather-forecast_h_l">
+					<div className="weather-forecast__high">{Math.round(props.high)}°</div>
+					<div className="weather-forecast__low">{Math.round(props.low)}°</div>		
+				</div>
+				
+			</div>
 		</div>
 		
 	);
